@@ -128,29 +128,6 @@ header {
   border-color: rgb(83, 141, 78);
 }
 
-@media only screen and (max-width: 400px) {
-  .square {
-    min-width: 15vw;
-    min-height: 15vw;
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  .square {
-    min-width: 11vw;
-    min-height: 11vw;
-    font-size: 16px;
-  }
-}
-
-.keyboard-row {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto 8px;
-  touch-action: manipulation;
-}
-
 .keyboard-row button {
   font-family: 'Noto Nastaliq Urdu', serif;
   font-weight: normal;
@@ -170,6 +147,36 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 400px) {
+  .square {
+    min-width: 15vw;
+    min-height: 15vw;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .square {
+    min-width: 12vw;
+    min-height: 12vw;
+    font-size: 16px;
+  }
+
+  .keyboard-row button {
+    font-size: 1rem;
+    margin-right: 6px;
+    height: 32px;
+    width: 62px;
+    text-align: justify;
+  }
+}
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 8px;
+  touch-action: manipulation;
 }
 
 .keyboard-row button.wide-button {
