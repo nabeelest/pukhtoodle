@@ -66,14 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function createSquares() {
     const gameBoard = document.getElementById("board");
-
-    for (let i = 0; i < 30; i++) {
-      let square = document.createElement("div");
-      square.classList.add("animate__animated");
-      square.classList.add("square");
-      square.setAttribute("id", i + 1);
-      gameBoard.appendChild(square);
-    }
   }
 
   function preserveGameState() {
@@ -114,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showResult() {
     const finalResultEl = document.getElementById("final-score");
-//     finalResultEl.textContent = "Wordle 1 - You win!";
+    finalResultEl.textContent = "Wordle 1 - You win!";
 
     const totalWins = window.localStorage.getItem("totalWins") || 0;
     window.localStorage.setItem("totalWins", Number(totalWins) + 1);
@@ -125,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showLosingResult() {
     const finalResultEl = document.getElementById("final-score");
-//     finalResultEl.textContent = `Wordle 1 - Unsuccessful Today!`;
+    finalResultEl.textContent = `Wordle 1 - Unsuccessful Today!`;
 
     window.localStorage.setItem("currentStreak", 0);
   }
