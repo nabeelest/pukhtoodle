@@ -135,6 +135,14 @@ header {
   }
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .square {
+    min-width: 11vw;
+    min-height: 11vw;
+    font-size: 16px;
+  }
+}
+
 .keyboard-row {
   display: flex;
   justify-content: center;
