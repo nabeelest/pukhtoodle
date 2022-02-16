@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let availableSpace = 1;
   let guessedWords = [[]];
 
-  const words = ["sweet", "onion", "shoes", "heavy", "couch"];
+  const words = ["ماښام", "ماښام", "ماښام", "ماښام", "ماښام"];
   let currentWord = words[currentWordIndex];
 
   initLocalStorage();
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showResult() {
     const finalResultEl = document.getElementById("final-score");
-    finalResultEl.textContent = "Wordle 1 - You win!";
+//     finalResultEl.textContent = "Wordle 1 - You win!";
 
     const totalWins = window.localStorage.getItem("totalWins") || 0;
     window.localStorage.setItem("totalWins", Number(totalWins) + 1);
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showLosingResult() {
     const finalResultEl = document.getElementById("final-score");
-    finalResultEl.textContent = `Wordle 1 - Unsuccessful Today!`;
+//     finalResultEl.textContent = `Wordle 1 - Unsuccessful Today!`;
 
     window.localStorage.setItem("currentStreak", 0);
   }
